@@ -1,13 +1,11 @@
-const { response } = require('express')
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const PORT = 8000
 
 app.use(cors())
-app.use(express.static("public"));
 
-const holidayDestinations = {  
+let holidayDestinations = {  
     'holiday one': {
         "HolidayReference": 1,
         "HotelName": "Uptown",
@@ -271,7 +269,7 @@ app.get('/api/:holiday', (request, response)=>{
     if(holidayDestinations[holidayNames]){
         response.json(holidayDestinations[holidayNames])
     } else {
-        response.json(holidayDestinations['holidayTwentyOne'])
+        response.json(holidayDestinations['unknown'])
     }
 })
 

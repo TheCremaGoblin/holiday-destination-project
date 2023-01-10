@@ -8,6 +8,8 @@ app.use(cors())
 
 const holidayDestinations = {  
     'holiday one': {
+        "test": 5,
+        "testy": 3,
         "HolidayReference": 1,
         "HotelName": "Uptown",
         "City": "Bali",

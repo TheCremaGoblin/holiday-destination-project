@@ -5,11 +5,10 @@ const cors = require('cors')
 const PORT = 8000
 
 app.use(cors())
+app.use(express.static("public"));
 
 const holidayDestinations = {  
     'holiday one': {
-        "test": 5,
-        "testy": 3,
         "HolidayReference": 1,
         "HotelName": "Uptown",
         "City": "Bali",
